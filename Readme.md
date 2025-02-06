@@ -23,17 +23,14 @@ Ex : `<p>This is Paragraph Content</p>`
 
 Ex : `<p>This is a Paragraph.</p>`
 
-
-
---------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 ## Terms related to Internet and How iternet works.
 ### Question Set - 1 (31st Jan 2025)
-what is IP address and type of IP address?
-what is DNS?
-What is Router?
-What is Server and type of server?
-How internet work?
-
+1. what is IP address and type of IP address?
+2. what is DNS?
+3. What is Router?
+4. What is Server and type of server?
+5. How internet work?
 -------------------------------------------------------------------------------
 
 
