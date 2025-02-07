@@ -51,6 +51,12 @@ Ex:  < div>, < p>, < h1> to < h6>, and < ul>, etc.
 1. **inline tag** -  Inline elements are used within block-level elements to style or format specific parts of the content. They don’t start on a new line and only take up as much width as necessary.
 Ex: < span>, < a>, < strong>, and < em>.
 
+| Feature     | Block-Level Elements                          | Inline Elements                                       |
+| ----------- | --------------------------------------------- | ----------------------------------------------------- |
+| Line Breaks | Force line breaks before and after by default | Don't inherently create line breaks                   |
+| Width       | Occupy full available width (by default)      | Only occupy space needed for their content            |
+| Stacking    | Can stack vertically on top of each other     | Can flow horizontally alongside other inline elements |
+
 ### Image and Multimedia
 **1. Image:** Used to embed images into a web page.
 - **tag:** < img /> tag
@@ -109,24 +115,61 @@ Ex: < span>, < a>, < strong>, and < em>.
 10. **sub:** The < sub> tag is used for subscript text, typically used for footnotes or chemical formulas.
 
 
-## Image, Video, Audio, iFrame tag
-1. Create a Small project - Adding section
-2. Name, Roll No
-3. Profile Pic
-4. Online Pic
-5. and a YT Video 
-## List in HTML
-1. Ordered List
-   - ol tag
-   - 
-2. Unordered List
-   - ul
-3. description list
-   - dl
+### HTML List
+
+- **Definition :** In HTML, a list is a way to organize and display related pieces of content in a structured format. Lists are useful for presenting information in a clear and organized manner, making it easier for users to understand the relationships between different items.
+
+**Type of HTML List**
+
+**1. Ordered List** An ordered list is defined using the < ol> tag in HTML. Each item within the list is defined using the < li> tag. By default, ordered lists display numbers (1, 2, 3...) to indicate the order of the items.
+- Tag: ol tag (ordered list), li tag (list item)
+- Attributes:
+  - type: This attribute specifies the numbering or lettering style used for the list items. Here are the common options:
+    - type="1" (default): Numbers the list items (1, 2, 3...)
+    - type="a": Lowercase alphabetical lettering (a, b, c...)
+    - type="A": Uppercase alphabetical lettering (A, B, C...)
+    - type="i": Lowercase Roman numerals (i, ii, iii...)
+    - type="I": Uppercase Roman numerals (I, II, III...)
+  - start: This attribute allows you to define a starting number or letter for the list. For example, start="4" would begin the list with "4" instead of "1".
+  - reversed: This attribute reverses the order of the numbering or lettering in the list.
+
+**2. Unordered List:** An unordered list in HTML is used to represent a collection of items where the order doesn't necessarily matter. These lists are typically displayed with bullet points to visually group the items.
+- An unordered list is defined using the < ul> tag in HTML.
+- Each item within the list is defined using the < li> tag.
+- By default, unordered lists display bullet points (●, ◦, etc.) for each list item.
+- Tag: ul tag (unordered list), 
+- Attribute: 
+  - type="disc" (default): The standard disc bullet (●)
+  - type="circle": A circle bullet (○)
+  - type="square": A square bullet (■)
+    
+**3. Definition List:** Definition lists in HTML provide a structured way to define terms and their corresponding meanings. They are essentially like mini-glossaries embedded within your web page.
+- Tag:
+  - < dl>: This tag marks the beginning of the definition list.
+  - < dt>: This tag defines the term being explained.
+  - < dd>: This tag defines the description or definition of the term.
+- Attribute: 
+  - Definition lists are simple and don't have any specific attributes associated with their tags.
+  - The structure relies on the proper nesting of tags:
+  - The < dl> tag acts as a container for the entire definition list.
+  - Within < dl>, each term being defined is wrapped in a < dt> tag.
+  - The corresponding definition or description for the term goes inside a < dd> tag, always following the < dt> tag for the corresponding term.
+
+---
+### Question Set - 2 (07th Feb 2025)
+1. Create an ordered list where the first item starts with the first letter of your name, and the last item starts with the last letter of your name. If the first letter comes later in the alphabet than the last letter, start with the first letter; otherwise, start with the last letter.
+
+   - Name: Shubham → Ordered List starts with S and ends with M
+   - Name: Akshay → Ordered List starts with Y and ends with A
+2. Write an HTML snippet to create an unordered list with circle bullets, containing five items of your choice.
+3. What are the different types of bullet styles available for unordered lists in HTML? Explain with examples.
+4. What are HTML Entities?
+5. Create List using HTML-
+
+![Question](https://i.ytimg.com/vi/aJ8c2LyoD08/sddefault.jpg)
+---
 
 
-
-
-https://github.com/ErShubham2908/SushantUIUX-2025
-Email : shubham.kumar@collegedekho.com
-Phone No: 9560203004
+**Code and Notes Repo -** `https://github.com/ErShubham2908/SushantUIUX-2025` <br>
+**Email :** `shubham.kumar@collegedekho.com` <br>
+**Phone No:** 9560203004
