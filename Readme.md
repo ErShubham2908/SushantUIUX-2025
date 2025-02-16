@@ -191,7 +191,7 @@ Ex: < span>, < a>, < strong>, and < em>.
 1. Write HTML Code to create Table?
    
    1. Table 1 -
-   ![alt text](image.png)
+      ![Table1](https://github.com/ErShubham2908/SushantUIUX-2025/blob/master/Assets/Table%201.png?raw=true)
 
    2. Table 2
     ![alt text](image-1.png)
