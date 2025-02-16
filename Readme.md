@@ -189,8 +189,10 @@ Ex: < span>, < a>, < strong>, and < em>.
 ---
 ### Question Set - 3 (14th Feb 2025)
 1. Write HTML Code to create Table?
+   
    1. Table 1 -
    ![alt text](image.png)
+
    2. Table 2
     ![alt text](image-1.png)
 
