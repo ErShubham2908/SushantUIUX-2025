@@ -167,7 +167,11 @@ Ex: < span>, < a>, < strong>, and < em>.
 5. Create List using HTML-
 
 ![Question](https://i.ytimg.com/vi/aJ8c2LyoD08/sddefault.jpg)
+
 ---
+### Question Set - 3 (14th Feb 2025)
+1. Write HTML Code to create Table?
+
 
 
 **Code and Notes Repo -** `https://github.com/ErShubham2908/SushantUIUX-2025` <br>
