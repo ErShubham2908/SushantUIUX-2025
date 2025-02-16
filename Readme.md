@@ -169,9 +169,30 @@ Ex: < span>, < a>, < strong>, and < em>.
 ![Question](https://i.ytimg.com/vi/aJ8c2LyoD08/sddefault.jpg)
 
 ---
+# HTML Table - 14th Feb
+**Table:** Tables are a fundamental way to structure and present data in a two-dimensional format (rows and columns) on web pages. They are ideal for displaying information that has clear relationships between different categories.
+- Tag: < table>< /table>
+- Attributes: 
+  - **border:** Sets the width of the table's border (in pixels).
+  - **cellpadding:** Defines the space between the cell content and its border (in pixels).
+  - **cellspacing:** Defines the space between adjacent cells (in pixels).
+  - **collapse:** Specifies how adjacent table borders should be rendered (e.g., collapse for merging borders).
+  - **width:** Sets the width of the table (can be a percentage or pixel value).
+  - **align:** Aligns the table within its container (e.g., left, center, right).
+
+**Table Structure**
+- **< table>:** Defines the beginning and end of the table.
+- **< tr>:** Defines a table row. Each row contains cells.
+- **< td>:** Defines a table data cell. Used for regular table content.
+- **< th>:** Defines a table header cell. Typically used for column labels and styled differently (often bold and centered).
+
+---
 ### Question Set - 3 (14th Feb 2025)
 1. Write HTML Code to create Table?
-
+   1. Table 1 -
+   ![alt text](image.png)
+   2. Table 2
+    ![alt text](image-1.png)
 
 
 **Code and Notes Repo -** `https://github.com/ErShubham2908/SushantUIUX-2025` <br>
