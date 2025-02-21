@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form in HTML</title>
+    </head>
+    <body>
+        <h1>Form in HTML</h1>
+
+        <form>
+            <!-- Name, Email, Password, Gender(Male, Female), Language(Hindi, English
+         Marathi, Bhojpuri) and a Submit button -->
+            <label for="uname">Name</label>
+            <input
+                type="text"
+                name="username"
+                id="uname"
+                placeholder="Enter Your Name"
+            />
+            <br />
+            <label for="email">Email</label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter Your Email"
+            />
+            <br />
+            <label for="Pass">Password</label>
+            <input
+                type="password"
+                name="pass"
+                id="Pass"
+                placeholder="Enter Your Password"
+            />
+            <br />
+
+            <!-- <button>Submit</button>
+         <input type="submit" value="Reset"> -->
+
+            <label for="">Gender:</label>
+
+            <input type="radio" name="gen" id="m" value="Male" />
+            <label for="m">Male</label>
+
+            <input type="radio" name="gen" id="f" value="Female" />
+            <label for="f">Female</label>
+
+            <input type="radio" name="gen" id="t" value="Third" />
+            <label for="t">Third</label>
+            <br />
+            <label for="">Language: </label>
+            <label>Hindi</label>
+            <input type="checkbox" name="lan1" value="Hindi" />
+            <label>English</label>
+            <input type="checkbox" name="lan2" value="English" />
+            <label>Marathi</label>
+            <input type="checkbox" name="lan3" value="Marathi" />
+            <label>Bhojpuri</label>
+            <input type="checkbox" name="lan4" value="Bhojpuri" />
+            <br />
+
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
+
+http://127.0.0.1:5500/21st%20Feb/index.html?
+username=Sushant&
+email=sushant%40university.com&
+pass=lsjhdfjsadfkja&
+gen=Male&lan1=Hindi&lan2=English&lan3=Marathi&lan4=Bhojpuri

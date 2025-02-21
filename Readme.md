@@ -188,14 +188,57 @@ Ex: < span>, < a>, < strong>, and < em>.
 
 ---
 ### Question Set - 3 (14th Feb 2025)
-1. Write HTML Code to create Table?
-   
+1. Write HTML Code to create Table?   
    1. Table 1 -
       ![Table1](https://github.com/ErShubham2908/SushantUIUX-2025/blob/master/Assets/Table%201.png?raw=true)
 
    2. Table 2
     ![alt text](image-1.png)
+---
+# HTML Form
 
+**Form:** HTML forms are used to collect user input. They are defined using the < form> tag.
+
+-   **Tag:**
+    -   **Form tag:** Forms are created using the < form> element, which acts as a container for various form elements.
+    -   **Label tag:** The **```<label>``` tag** defines a label for an ```<input>```, ```<select>```, ```<textarea>```, or ```<button>``` element. It improves accessibility by providing a clickable area that focuses its associated form element when clicked.
+    -   **Attribute for label:**
+        -   **for:** Specifies which form element a label is bound to. It should match the id attribute of the associated form element.
+    -   **Input tag:** The ```<input>``` tag is used to create input fields within a form.
+    -   **Attribute for input:**
+        -   **type:** Specifies the type of input field. Common values include "text", "password", "checkbox", "radio", "submit", etc.
+        -   **name:** Specifies the name of the input field. This is used to identify the field in the form submission.
+        -   **value:** Specifies the initial value of the input field.
+        -   **placeholder:** Specifies a short hint that describes the expected value of the input field (displayed when the field is empty).
+        -   **required:** Specifies that the input field must be filled out before submitting the form.
+        -   **disabled:** Specifies that the input field is disabled and cannot be edited.
+        -   **readonly:** Specifies that the input field is read-only (cannot be edited by the user).
+        -   **maxlength:** Specifies the maximum number of characters allowed in the input field.
+        -   **size:** Specifies the width of the input field, in characters.
+        -   **autocomplete:** Specifies whether the browser should automatically complete the input value based on the user's input history.
+        -   **autofocus:** Specifies that the input field should automatically get focus when the page loads.
+
+**Type Attribute in input tag:**
+
+-   **text:** A single-line text input field.
+-   **password:** A text field where the input is obscured (usually as asterisks) for security purposes.
+-   **checkbox:** A checkbox that allows users to select multiple options.
+-   **radio:** A radio button that allows users to select only one option from a group of options.
+-   **submit:** A button that submits the form data to the server.
+-   **button:** A button that can trigger custom JavaScript functions.
+-   **file:** A file upload field that allows users to select files from their device.
+-   **email:** A text field intended for entering an email address.
+-   **number:** A text field intended for entering a numerical value.
+
+### Question Set - 4 (21st Feb)
+1. login Form - 1 ![form1](https://i.ytimg.com/vi/O4uDlYZpKa0/maxresdefault.jpg)
+2. Registration From - 2 (Only Create Structure) ![Form2](https://miro.medium.com/v2/resize:fit:720/format:webp/1*-pSxnW8a_Jrgkq3T39AEzg.jpeg)
+3. Please connect Both form, if user already register, they can move to login page, and vice versa and in both the form when user click on button login/signup, data with display in URL with proper key and value.
+4. What is difference between Radio Button and Checkbox button.
+5. creaet a profile using HTML, profile contain student Name, Education, DOB, Address and P-size Photo. detail about your education in detail, address in detail, hobby, interesst, skill, technology you know, project you completed in school and college.
+6. Form - 3 (bonus) ![form3](https://foolishdeveloper.com/wp-content/uploads/2021/12/Registration-form-in-HTML-code.jpg)
+7. Form - 4 (bonus) ![form4](https://www.phpcrm.com/wp-content/uploads/church_event_registration_form.png)
+---
 
 **Code and Notes Repo -** `https://github.com/ErShubham2908/SushantUIUX-2025` <br>
 **Email :** `shubham.kumar@collegedekho.com` <br>
