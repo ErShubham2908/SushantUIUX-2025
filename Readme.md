@@ -235,7 +235,7 @@ Ex: < span>, < a>, < strong>, and < em>.
 2. Registration From - 2 (Only Create Structure) ![Form2](https://miro.medium.com/v2/resize:fit:720/format:webp/1*-pSxnW8a_Jrgkq3T39AEzg.jpeg)
 3. Please connect Both form, if user already register, they can move to login page, and vice versa and in both the form when user click on button login/signup, data with display in URL with proper key and value.
 4. What is difference between Radio Button and Checkbox button.
-5. creaet a profile using HTML, profile contain student Name, Education, DOB, Address and P-size Photo. detail about your education in detail, address in detail, hobby, interesst, skill, technology you know, project you completed in school and college.
+5. create a profile using HTML, profile contain student Name, Education, DOB, Address and P-size Photo. detail about your education in detail, address in detail, hobby, interesst, skill, technology you know, project you completed in school and college.
 6. Form - 3 (bonus) ![form3](https://foolishdeveloper.com/wp-content/uploads/2021/12/Registration-form-in-HTML-code.jpg)
 7. Form - 4 (bonus) ![form4](https://www.phpcrm.com/wp-content/uploads/church_event_registration_form.png)
 ---
