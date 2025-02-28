@@ -1,0 +1,58 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+/* *{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+} */
+
+
+/* p{
+    border: 2px solid red;
+}
+
+h1, h4{
+    box-shadow: 5px 5px 5px grey;
+} */
+
+
+/* #heading1{
+    font-style: italic;
+}
+
+#para{
+    color: aqua;
+}
+
+.para1{
+    color: rgb(165, 75, 75);
+} */
+
+/* #div1{ */
+    /* box-sizing: border-box;
+    width: 500px;
+    height: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 10px solid red; */
+/* } */
+
+
+/* width = 2(M+B+p)+w
+height = 2(M+B+P)+H */
+
+
+/* div{
+    width: 650px;
+    height: 370px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 10px;
+    border: 10px double black;
+} */
