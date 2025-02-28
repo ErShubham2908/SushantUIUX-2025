@@ -349,8 +349,9 @@ The CSS box model is a fundamental concept in web design that defines how elemen
 -   **Responsive design:** By understanding how box model properties interact, you can create layouts that adapt to different screen sizes.
 -   **Consistent visual appearance:** The box model ensures a consistent way for browsers to render elements across different platforms.
 
-**Q. calculate height and width of card, in box-sizing border box, height is 300px, width is 350px, border, margin and padding is 20px each.**
-
+**Q1. calculate height and width of card, in box-sizing border box, height is 300px, width is 350px, border, margin and padding is 20px each.**
+**Q2. Calculate the total width 450px and height 250px of the box model, including all aspects of padding 15px, border 3px, and margin 20px.**
+**Q3. Calculate the total width 300px and height 250px of the box model (content area, padding-left/top 20px, padding-right/bottom 30px, border 5px, and margin 10px), considering box-sizing: border-box;**
 
 
 **Code and Notes Repo -** `https://github.com/ErShubham2908/SushantUIUX-2025` <br>
