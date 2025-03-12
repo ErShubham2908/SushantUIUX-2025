@@ -353,7 +353,102 @@ The CSS box model is a fundamental concept in web design that defines how elemen
 **Q2. Calculate the total width 450px and height 250px of the box model, including all aspects of padding 15px, border 3px, and margin 20px.**
 **Q3. Calculate the total width 300px and height 250px of the box model (content area, padding-left/top 20px, padding-right/bottom 30px, border 5px, and margin 10px), considering box-sizing: border-box;**
 
+---
 
-**Code and Notes Repo -** `https://github.com/ErShubham2908/SushantUIUX-2025` <br>
-**Email :** `shubham.kumar@collegedekho.com` <br>
+## CSS Font Properties
+
+In CSS, font properties are used to control the appearance of text on web pages. They allow you to specify various aspects of the font used, such as size, style, weight, and more.  
+Here’s a breakdown of the main font properties  
+
+1. **font-family:** Specifies the font family or list of fonts for an element. If the specified font is not available, the browser will use the next font in the list.  
+**Syntax:** font-family: font1, font2, ...;  
+**Example:** font-family: Arial, Helvetica, sans-serif;
+
+2. **font-size:** Sets the size of the font.
+**Syntax:** font-size: value;  
+**Example:** ```font-size: 16px;```
+
+3. **font-style:** Specifies the style of the font, such as normal, italic, or oblique.  
+**Syntax:** font-style: normal | italic | oblique;  
+**Example:** ```font-style: italic;```  
+
+4. **font-weight:** Sets the thickness or boldness of the font.  
+**Syntax:** font-weight: normal | bold | bolder | lighter | 100-900;  
+**Example:** ```font-weight: bold;```
+
+5. **font-variant:** The font-variant property in CSS is used to specify whether the text should be displayed in small-caps or in its normal form.   
+**Syntax:** font-variant: normal | small-caps;  
+**Example:**  ```font-variant: small-caps;```  
+
+6. **line-height:** Sets the height of each line of text.  
+**Syntax:**  line-height: value;  
+**Example:** ```line-height: 1.5;```
+
+7. **font:** Shorthand property that allows you to set all the font properties in one declaration.  
+**Syntax:** font: ```[font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];```  
+**Example:** ```font: italic small-caps bold 16px/1.5 Arial, sans-serif;```
+
+---
+## CSS Border Properties
+A border in CSS is a property that defines the boundary around an HTML element. It separates an element from other elements and can be styled using different widths, colors, and styles.
+
+1. **border-width:** Defines the thickness of the border.  
+**Syntax-** border-width: value  
+**Example:** ```border-width: 2px;```  
+
+2. **border-style:** Specifies the type of border.  
+**Syntax-** border-style: value  
+**Example-** ```border-style: solid```  
+  **Possible value -** {  
+      A. solid – A single solid line.  
+      B. dotted – A border with small dots.  
+      C. dashed – A dashed line.  
+      D. double – Two solid lines.  
+      E. groove – A 3D groove effect.  
+      F. ridge – A 3D ridge effect.  
+      G. inset – A border with an inset effect.  
+      H. outset – A border with an outset effect.  
+      I. none – No border.  
+}
+
+3. **border-color:** Defines the color of the border.  
+**Syntax-** border-color: color  
+**Example-** ```border-color: red```  
+**Ex 2-** border-color: red green blue yellow (Top -> Right -> bottom -> left) 
+
+4. **border (Shorthand Property):** The border property is a shorthand to set the border-width, border-style, and border-color in one declaration.  
+**Syntax:** border: width style color
+**Ex:** ```border: 2px solid red;```  
+
+5. **border-radius:** Gives rounded corners to the border.  
+**Syntax:** border-radius: value
+**Ex:** ```border-radius: 5px```
+
+6. **Separated border**  
+-> **border-top**, **border-right**, **border-bottom**, **border-left**  
+-> These properties allow you to set individual border styles for each side.
+
+---
+## Git & Github setup
+1. open cmd and write git --version.
+2. download git.
+3. install git.
+4. close cmd, and again it, write git --version.
+5. create an account on GitHub.com.
+6. Verify your email.
+7. connect your GitHub account with local git (only once)   
+	7.1. git config --global user.name "Your Name"  
+	7.2. git config --global user.email "your_email@example.com"
+ 
+8. some common commands  
+	A. git init - initialized your git (use once while creating re~zpo)  
+	B. git add . - add all files and folders (use every time you update your repo)  
+	C. git commit -m "Message" - commit all changes (use every time on your updation)  
+	D. git remote add origin (your repo link) (use once while creating your repo)  
+	E. git push origin master (use every time on your updation)  
+
+---
+
+**Code and Notes Repo -** `https://github.com/ErShubham2908/SushantUIUX-2025`  
+**Email :** `shubham.kumar@collegedekho.com`  
 **Phone No:** 9560203004
