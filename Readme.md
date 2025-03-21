@@ -349,9 +349,29 @@ The CSS box model is a fundamental concept in web design that defines how elemen
 -   **Responsive design:** By understanding how box model properties interact, you can create layouts that adapt to different screen sizes.
 -   **Consistent visual appearance:** The box model ensures a consistent way for browsers to render elements across different platforms.
 
-**Q1. calculate height and width of card, in box-sizing border box, height is 300px, width is 350px, border, margin and padding is 20px each.**
-**Q2. Calculate the total width 450px and height 250px of the box model, including all aspects of padding 15px, border 3px, and margin 20px.**
+**Q1. calculate height and width of card, in box-sizing border box, height is 300px, width is 350px, border, margin and padding is 20px each.**   
+**Q2. Calculate the total width 450px and height 250px of the box model, including all aspects of padding 15px, border 3px, and margin 20px.**   
 **Q3. Calculate the total width 300px and height 250px of the box model (content area, padding-left/top 20px, padding-right/bottom 30px, border 5px, and margin 10px), considering box-sizing: border-box;**
+
+---
+12th March '2025   
+## Git & Github setup
+1. open cmd and write git --version.
+2. download git.
+3. install git.
+4. close cmd, and again it, write git --version.
+5. create an account on GitHub.com.
+6. Verify your email.
+7. connect your GitHub account with local git (only once)   
+	7.1. git config --global user.name "Your Name"  
+	7.2. git config --global user.email "your_email@example.com"
+ 
+8. some common commands  
+	A.   - initialized your git (use once while creating repo)  
+	B. git add . - add all files and folders (use every time you update your repo)  
+	C. git commit -m "Message" - commit all changes (use every time on your updation)  
+	D. git remote add origin (your repo link) (use once while creating your repo)  
+	E. git push origin master (use every time on your updation)  
 
 ---
 
@@ -393,14 +413,14 @@ Here’s a breakdown of the main font properties
 A border in CSS is a property that defines the boundary around an HTML element. It separates an element from other elements and can be styled using different widths, colors, and styles.
 
 1. **border-width:** Defines the thickness of the border.  
-**Syntax-** border-width: value  
-**Example:** ```border-width: 2px;```  
+    - **Syntax-** border-width: value  
+    - **Example:** ```border-width: 2px;```  
 
 2. **border-style:** Specifies the type of border.  
-**Syntax-** border-style: value  
-**Example-** ```border-style: solid```  
-  **Possible value -** {  
-      A. solid – A single solid line.  
+  -  **Syntax-** border-style: value  
+  - **Example-** ```border-style: solid```  
+  -  **Possible value -** {  
+      - A. solid – A single solid line.  
       B. dotted – A border with small dots.  
       C. dashed – A dashed line.  
       D. double – Two solid lines.  
@@ -409,43 +429,192 @@ A border in CSS is a property that defines the boundary around an HTML element. 
       G. inset – A border with an inset effect.  
       H. outset – A border with an outset effect.  
       I. none – No border.  
-}
+  }
 
-3. **border-color:** Defines the color of the border.  
-**Syntax-** border-color: color  
-**Example-** ```border-color: red```  
-**Ex 2-** border-color: red green blue yellow (Top -> Right -> bottom -> left) 
+1. **border-color:** Defines the color of the border.  
+    - **Syntax-** border-color: color  
+    - **Example-** ```border-color: red```  
+    - **Ex 2-** border-color: red green blue yellow (Top -> Right -> bottom -> left) 
 
-4. **border (Shorthand Property):** The border property is a shorthand to set the border-width, border-style, and border-color in one declaration.  
-**Syntax:** border: width style color
-**Ex:** ```border: 2px solid red;```  
+2. **border (Shorthand Property):** The border property is a shorthand to set the border-width, border-style, and border-color in one declaration.  
+    - **Syntax:** border: width style color
+    - **Ex:** ```border: 2px solid red;```  
 
-5. **border-radius:** Gives rounded corners to the border.  
-**Syntax:** border-radius: value
-**Ex:** ```border-radius: 5px```
+1. **border-radius:** Gives rounded corners to the border.  
+    - **Syntax:** border-radius: value
+    - **Ex:** ```border-radius: 5px```
 
-6. **Separated border**  
+1. **Separated border**  
 -> **border-top**, **border-right**, **border-bottom**, **border-left**  
 -> These properties allow you to set individual border styles for each side.
 
+```**Q:** **Create a Circle using HTML & CSS.**```
+
 ---
-## Git & Github setup
-1. open cmd and write git --version.
-2. download git.
-3. install git.
-4. close cmd, and again it, write git --version.
-5. create an account on GitHub.com.
-6. Verify your email.
-7. connect your GitHub account with local git (only once)   
-	7.1. git config --global user.name "Your Name"  
-	7.2. git config --global user.email "your_email@example.com"
- 
-8. some common commands  
-	A. git init - initialized your git (use once while creating re~zpo)  
-	B. git add . - add all files and folders (use every time you update your repo)  
-	C. git commit -m "Message" - commit all changes (use every time on your updation)  
-	D. git remote add origin (your repo link) (use once while creating your repo)  
-	E. git push origin master (use every time on your updation)  
+
+# Box-Shadow and Text-Shadow in CSS
+
+**1. Text Shadow:** The text-shadow property adds shadow to the text of an element. It creates a shadow effect behind the text to make it stand out or give it a more visually appealing appearance.
+
+-   **CSS Property:**
+
+`text-shadow: [horizontal offset] [vertical offset] [blur radius] [color];`
+
+-   **Horizontal Offset:** It specifies the horizontal distance of the shadow from the text. A positive value moves the shadow to the right, while a negative value moves it to the left.
+-   **Vertical Offset:** It specifies the vertical distance of the shadow from the text. A positive value moves the shadow downwards, while a negative value moves it upwards.
+-   **Extra :**
+    -   **Offset:** Defines how far the shadow is positioned horizontally (x-axis) and vertically (y-axis) from the text. Values can be positive, negative lengths (px, em, rem), or percentages.
+-   **Blur Radius:** It specifies the amount of blur applied to the shadow. A higher value creates a more blurred shadow effect.
+-   **Color:** It specifies the color of the shadow. You can use color names, hexadecimal, RGB, RGBA, HSL, or HSLA values to define the color.
+-   **Example:**
+
+```
+h1 {
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+}
+```
+
+**2. Box-Shadow:** The box-shadow property adds shadow effects to an element's box (such as a < div>). It creates a shadow behind the box, giving it depth and dimensionality.
+
+**CSS Property:**
+
+```
+box-shadow: [horizontal offset] [vertical offset] [blur radius] [spread radius] [color] [inset];
+```
+
+-   **Horizontal Offset:** It specifies the horizontal distance of the shadow from the box. Positive values move the shadow to the right, and negative values move it to the left.
+-   **Vertical Offset:** It specifies the vertical distance of the shadow from the box. Positive values move the shadow downwards, and negative values move it upwards.
+-   **Blur Radius:** It specifies the amount of blur applied to the shadow. Higher values create a more blurred shadow effect.
+-   **Spread Radius:** It specifies the spread of the shadow. Positive values expand the shadow, while negative values shrink it. This property is optional.
+-   **Color:** It specifies the color of the shadow, using the same color value formats as text-shadow.
+
+```
+box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.5);
+```
+---
+
+# CSS Position
+
+The **position** property in CSS governs how an HTML element is positioned within a document's layout. It offers five distinct values that control the element's placement relative to its usual flow in the document or the viewport (the visible area of the browser window).
+**1. Static - (Default):**
+  - Elements with **position: static** (the default) occupy their standard position in the document's flow, meaning they're laid out one after another in the order they appear in the HTML code.  
+  - The **top**, **right**, **bottom**, and **left** properties have no effect on statically positioned elements.
+
+```
+.absolute-element {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+```
+
+**2. Absolute**  
+  - Elements with position: absolute are removed from the document's flow and positioned relative to their nearest containing block (often the parent element or a block-level element like a < div>).  
+  - The top, right, bottom, and left properties are used to specify the absolute position of the element within its containing block.  
+  - Absolutely positioned elements create gaps in the document's flow where they would have been without absolute positioning.  
+
+```
+    .absolute-element {
+      position: absolute;
+      top: 50px;
+      right: 0;
+    } 
+```
+
+**3. Relative**  
+   - Elements with position: relative remain in the document's flow but can be shifted relative to their original position using the top, right, bottom, and left properties.  
+   - These offset values are applied relative to the element's original position, not the viewport or any containing element.
+   - Elements retain their place in the normal flow but can be offset using top, bottom, left, and right properties.
+   - Offsets are relative to the element's original position in the flow.
+
+```
+   .relative-element {
+        position: relative;
+        top: 50px; 
+        left: 20px;  
+} 
+```
+
+**4. Sticky**  
+  -  Combines aspects of relative and fixed.  
+  - Behaves like relative until it reaches a specific scroll position.  
+  - Then "sticks" to the viewport like fixed.  
+  - Useful for headers that stay visible until a certain point.     
+
+```
+    .sticky-element {
+        position: sticky;
+        top: 5px; 
+        left: 0;  
+} 
+```
+
+**5. Fixed**  
+  -  The element is removed from the normal document flow and positioned relative to the viewport. It stays in the same position even if the page is scrolled.    
+  -  Positioned relative to the viewport and remains fixed even when scrolling.  
+  -  Useful for navigation bars or sidebars that stay visible.  
+  -  Uses top, right, bottom, and left properties for positioning.  
+    ```
+    .fixed-element {
+        position: fixed;
+        top: 0;   
+        left: 0;
+}
+
+---
+
+# CSS Display Properties
+The display property in CSS determines how an HTML element is displayed on a web page. It defines whether an element should be treated as a block, inline, flex, grid, or other types, affecting its layout and how it interacts with surrounding elements.  
+
+**Key Benefits:**
+
+  - **Layout Control:** It provides fundamental control over the layout of web pages, enabling you to arrange elements horizontally, vertically, or in grids.
+  - **Flexibility:** It allows you to change the default behavior of elements, making them behave differently based on your design needs.
+  - **Responsiveness:** Combined with other CSS properties, display helps create responsive designs that adapt to different screen sizes.
+  - **Semantic Structure:** Choosing the right display value can enhance the semantic meaning of your HTML, improving accessibility and search engine optimization.
+
+**Important Points and Display Values:**
+
+**1. display: block;**  
+**Definition:** The element generates a block-level box, meaning it occupies the full width of its parent container and starts on a new line.  
+  - **Key points:**
+    - Elements like ```<div>, <p>, <h1> to <h6>, and <form>``` are block-level elements by default.   
+    - You can set width and height explicitly.
+    - Margin and padding affect the element's dimensions.  
+
+**2. display: inline;**  
+**Definition:** The element generates an inline-level box, meaning it only occupies the space necessary to contain its content and does not start on a new line.    
+  - **Key points:**  
+  - Elements like ```<span>, <a>, <em>, and <strong>``` are inline elements by default.
+Width and height properties have no effect.  
+  - Vertical margins and padding have limited effect. Horizontal margins and padding work.  
+
+**3. display: inline-block;**  
+**Definition:** The element generates an inline-level block container. It's a hybrid of inline and block, allowing you to set width and height while keeping the element inline.  
+  - **Key points:**  
+  - Elements are laid out inline, but you can apply width, height, margins, and padding like block-level elements.  
+  - Useful for creating elements that sit side by side but have defined dimensions.
+
+**4. display: none;**  
+**Definition:** The element is completely removed from the document flow and is not rendered.  
+  - **Key points:**
+  - The element takes up no space on the page.  
+  - Useful for hiding elements dynamically using JavaScript.
+  - It is different than visibility: hidden, because display:none removes the element from the document flow, where as visibility: hidden, makes the element invisible, but it still takes up space.  
+
+**5. display: flex;**  
+**Definition:** The element becomes a flex container, enabling the use of flexbox layout.  
+**Key points:**  
+  - Provides powerful tools for creating flexible and responsive layouts.  
+  - Properties like justify-content, align-items, and flex-direction control the layout of flex items.  
+  - It is used for one dimensional layouts.
+
+**6. display: grid;**  
+**Definition:** The element becomes a grid container, enabling the use of grid layout.  
+**Key points:**
+  - Provides powerful tools for creating two-dimensional layouts.  
+  - Properties like grid-template-rows, grid-template-columns, and grid-area control the grid's structure.  
+  - It is used for two dimensional layouts.  
 
 ---
 
