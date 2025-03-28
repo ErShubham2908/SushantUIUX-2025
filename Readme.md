@@ -563,6 +563,57 @@ The **position** property in CSS governs how an HTML element is positioned withi
 
 ---
 
+## Background Image, Linear Gradient & Radial Gradient in CSS  
+**1. Background Image**  
+**Definition:** The background-image property in CSS is used to set an image as the background of an element.
+
+**Properties Used:**
+- **background-repeat: no-repeat;** → Prevents repeating of the image.
+- **background-size: cover;** → Ensures the image covers the entire container.
+- **background-position: center;** → Centers the image inside the div.
+
+```
+selector {
+  background-image: url("image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+```
+
+**2. Linear Gradient**  
+**Definition:** A linear gradient creates a smooth transition between multiple colors along a straight line (horizontal, vertical, or diagonal).
+**Direction Options:**
+- to right (→)
+- to left (←)
+- to bottom (↓)
+- to top (↑)
+- 45deg, 90deg, etc. (Custom angles)
+
+```
+selector {
+  background: linear-gradient(direction, color1, color2, ...);
+}
+```
+
+**3. Radial Gradient**  
+**Definition:** A radial gradient creates a smooth transition between colors radiating outward from a central point.  
+**Shape Options:**
+- circle (Default)
+- ellipse  
+
+**Size Options:**
+  - closest-side
+  - closest-corner
+  - farthest-side
+  - farthest-corner
+
+```
+selector {
+  background: radial-gradient(shape size at position, color1, color2, ...);
+}
+```
+
 # CSS Display Properties
 The display property in CSS determines how an HTML element is displayed on a web page. It defines whether an element should be treated as a block, inline, flex, grid, or other types, affecting its layout and how it interacts with surrounding elements.  
 
@@ -578,22 +629,56 @@ The display property in CSS determines how an HTML element is displayed on a web
 **1. display: block;**  
 **Definition:** The element generates a block-level box, meaning it occupies the full width of its parent container and starts on a new line.  
   - **Key points:**
+  - They allow for easy manipulation of layout, such as setting width, height, margins, and padding.
     - Elements like ```<div>, <p>, <h1> to <h6>, and <form>``` are block-level elements by default.   
     - You can set width and height explicitly.
     - Margin and padding affect the element's dimensions.  
 
+```
+.block-element {
+    display: block;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+}
+```
+
 **2. display: inline;**  
 **Definition:** The element generates an inline-level box, meaning it only occupies the space necessary to contain its content and does not start on a new line.    
   - **Key points:**  
-  - Elements like ```<span>, <a>, <em>, and <strong>``` are inline elements by default.
+    - They flow within the content and are ideal for elements that need to sit next to each other horizontally.
+    - Elements like ```<span>, <a>, <em>, and <strong>``` are inline elements by default.
 Width and height properties have no effect.  
-  - Vertical margins and padding have limited effect. Horizontal margins and padding work.  
+    - Vertical margins and padding have limited effect. Horizontal margins and padding work.  
+
+```
+.inline-element {
+    display: inline;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #e0e0e0;
+}
+```
 
 **3. display: inline-block;**  
 **Definition:** The element generates an inline-level block container. It's a hybrid of inline and block, allowing you to set width and height while keeping the element inline.  
   - **Key points:**  
+  - They combine the benefits of block and inline elements, allowing for block-level styling while flowing inline.
   - Elements are laid out inline, but you can apply width, height, margins, and padding like block-level elements.  
   - Useful for creating elements that sit side by side but have defined dimensions.
+
+```
+.inline-block-element {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 5px;
+    padding: 3px;
+    background-color: #d0d0d0;
+}
+```
 
 **4. display: none;**  
 **Definition:** The element is completely removed from the document flow and is not rendered.  
@@ -602,12 +687,122 @@ Width and height properties have no effect.
   - Useful for hiding elements dynamically using JavaScript.
   - It is different than visibility: hidden, because display:none removes the element from the document flow, where as visibility: hidden, makes the element invisible, but it still takes up space.  
 
-**5. display: flex;**  
-**Definition:** The element becomes a flex container, enabling the use of flexbox layout.  
-**Key points:**  
-  - Provides powerful tools for creating flexible and responsive layouts.  
-  - Properties like justify-content, align-items, and flex-direction control the layout of flex items.  
-  - It is used for one dimensional layouts.
+
+**What is difference between Block, Inline-block and inline**
+---
+
+| Feature            | Block                      | Inline-Block                 | Inline                      |
+|--------------------|----------------------------|------------------------------|-----------------------------|
+| **Starts on a new line?** | ✅ Yes              | ❌ No                       | ❌ No                       |
+| **Takes full width?** | ✅ Yes (by default)         | ❌ No (only as much as needed) | ❌ No (only as much as content) |
+| **Can set width & height?** | ✅ Yes                        | ✅ Yes                        | ❌ No                         |
+| **Respects margin & padding?** | ✅ Yes (all sides)         | ✅ Yes (all sides)         | ⚠️ Only horizontal (left & right) |
+| **Stacks on top of each other?** | ✅ Yes                        | ❌ No (placed inline)      | ❌ No (placed inline)       |
+| **Common elements** | `<div>`, `<p>`, `<section>`   | `<button>`, `<img>`, `<input>` | `<span>`, `<a>`, `<strong>`  |
+| **Best use case** | Structure/layout (e.g., sections, containers) | Inline elements that need size control (e.g., buttons, menus) | Small text elements that flow naturally |
+---
+
+# Display : Flex
+
+**1. Flex & inline-flex**  
+-
+-  **display: flex;** → Makes an element a block-level flex container. 
+  ```
+  .container{
+      display: flex;
+  }
+  ```
+-  **display: inline-flex;** → Makes an element an inline-level flex container.  
+  ```
+  .container{
+      display: inline-flex;
+  }
+  ```
+
+**2. flex-direction  (Defines the Direction of Items)**
+-
+- Determines the main axis along which items are placed.   
+|Value|Effect|
+  |---|---|
+  |**row (default)**| Items align horizontally (left to right)|
+  |**row-reverse** | Items align horizontally (right to left)|
+  |**column** | Items align vertically (top to bottom)|
+  |**column-reverse** | Items align vertically (bottom to top) |
+
+```
+.container {
+    display: flex;
+    flex-direction: column;
+}
+```
+
+**3. justify-content (Aligns Items Horizontally)**
+-
+- Determines the main axis along which items are placed.  
+
+|Value|Effect| 
+|---|---|
+|**flex-start (default)**|	Items align to the start (left in row, top in column)|
+|**flex-end**|	Items align to the end (right in row, bottom in column)|
+|**center**|	Items center along the main axis.|
+|**space-between**|	Items are evenly spaced, first and last touching edges|
+|**space-around**|	Items are evenly spaced, with gaps on both sides|
+|**space-evenly**|	Items are evenly distributed, with equal spacing everywhere|
+---
+
+```
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+```
+
+**4. align-items (Aligns Items Vertically)**
+-
+- Controls how items are aligned along the cross-axis.  
+
+|Value | Effect | 
+|--- | --- |
+|**stretch (default)**|	Items stretch to fill container height|
+|**flex-start**| Items align at the top (or left in column)|
+|**flex-end**|	Items align at the bottom (or right in column)|
+|**center**|	Items center vertically|
+|**baseline**|	Items align based on their text baseline|
+---
+
+```
+.container {
+    display: flex;
+    align-items: center;
+}
+```
+
+**5. flex-wrap (Handles Item Wrapping)**  
+-
+- Determines whether items should wrap to the next line if they don’t fit.
+
+|Value |	Effect|
+|--- | --- | 
+|**nowrap (default)**|	Items do not wrap and may overflow|
+|**wrap**|	Items wrap to a new row/column if needed|
+|**wrap-reverse**|	Items wrap in reverse order|
+---
+```
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+```
+
+**6. gap (Adds Space Between Items)**
+-
+- Sets spacing between flex items.  
+```
+.container {
+    display: flex;
+    gap: 20px;
+}
+```
 
 **6. display: grid;**  
 **Definition:** The element becomes a grid container, enabling the use of grid layout.  

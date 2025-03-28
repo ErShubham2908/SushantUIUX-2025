@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent-container{
+    width: 80%;
+    height: 70vh;
+    border: 1px solid green;
+    /* display: inline; */
+    margin: auto;
+    overflow: hidden;
+}
+
+.child{
+    width: 33%;
+    height: 20vh;
+    border: 2px double red ;
+    display: inline-block;
+}
