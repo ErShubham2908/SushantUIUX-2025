@@ -813,6 +813,69 @@ Width and height properties have no effect.
 
 ---
 
+# For next lecture
+
+
+# Display Grid
+
+**Grid:** CSS Grid is a powerful layout system that allows you to create flexible, two-dimensional grids of elements on a web page. It offers a more intuitive and efficient way to structure complex layouts compared to traditional methods like floats or tables.
+**Key benefits:**
+
+-   **Responsive design:** Grid layouts adapt seamlessly to different screen sizes, making your website responsive and user-friendly across devices.
+-   **Precise control:** You have fine-grained control over the placement and sizing of grid items, enabling intricate and visually appealing layouts.
+-   **Flexibility:** Grid layout properties can be combined effectively to achieve a wide variety of design goals.
+-   **Semantic structure:** Encourages a more meaningful structure for your HTML content.
+
+1. **Container Properties:**
+
+-   **display: grid or display: inline-grid;:**
+    -   Transforms an element into a grid container, the parent element that holds the grid items.
+    -   grid is for block-level elements, while inline-grid allows inline elements to behave as grid containers.
+
+1. **Grid Lines and Tracks:**
+
+-   **grid-template-columns and grid-template-rows:**
+    -   Define the explicit sizing and number of grid tracks (columns and rows). You can specify values in pixels (px), percentages (%), or fractions (fr).
+    -   Example: .grid-container { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 200px auto; } (Creates three equal-width columns and two rows: a fixed-height first row and an auto-height second row)
+-   **grid-auto-columns and grid-auto-rows:**
+    -   Determine the implicit (default) size of grid tracks when explicit values haven't been set for grid-template-columns or grid-template-rows.
+    -   Example: .grid-container { display: grid; grid-auto-columns: minmax(200px, 1fr); } (Sets a minimum width of 200px for columns and switches to a flexible fraction layout if there's enough space)
+
+1. **Grid Item Placement:**
+    - **grid-column-start, grid-column-end, grid-row-start, and grid-row-end:**
+        - Specify the grid lines on which a grid item should start and end, controlling its placement within the grid.
+        - Example: .item1 { grid-column-start: 1; grid-row-start: 1; grid-column-end: span 2; } (Places item1 starting at the first column and first row, spanning two columns)
+    - **grid-column and grid-row (shorthand):**
+        - Combine grid-column-start and grid-row-start into a single property for simpler positioning.
+        - Example: .item2 { grid: 2 / span 2; } (Places item2 starting at the second row and spanning two columns)
+2. **Grid Gaps:**
+    - **row-gap and column-gap:**
+        - Define the spacing between grid rows and columns, respectively.
+        - Example: .grid-container { display: grid; row-gap: 20px; column-gap: 10px; } (Sets 20px spacing between rows and 10px spacing between columns)
+    - **gap (shorthand):**
+        - Combines row-gap and column-gap into one property for convenience.
+        - Example: .grid-container { display: grid; gap: 15px; } (Sets a 15px gap between both rows and columns).
+
+# Pseudo Selector
+In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element) is a keyword added to a selector that specifies a special state of the selected elements. Pseudo-selectors allow you to style elements based on their state or position in the document tree without needing to add additional classes or IDs to the HTML.
+
+**Two main type of Pseudo selector**
+
+**1. pseudo element:** Pseudo-elements are used to style specific parts of an element. 
+    + before: Inserts content before the content of an element.
+    + after: Inserts content after the content of an element.
+    + first-letter: Styles the first letter of a block element.
+    + first-line: Styles the first line of a block element.
+
+**2. pseudo class:** Pseudo-classes are used to define the special states of an element.
+      + Hover: Styles an element when the mouse pointer is over it.
+      + focus: Styles an element when it has focus (e.g., when an input field is selected).
+      + first-child: Styles the first child of a parent element.
+      + last-child: Styles the last child of a parent element.
+      + nth-child: Styles the nth child of a parent element.
+
+---
+
 **Code and Notes Repo -** `https://github.com/ErShubham2908/SushantUIUX-2025`  
 **Email :** `shubham.kumar@collegedekho.com`  
 **Phone No:** 9560203004
