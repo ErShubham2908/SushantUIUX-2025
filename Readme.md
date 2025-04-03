@@ -815,7 +815,6 @@ Width and height properties have no effect.
 
 # For next lecture
 
-
 # Display Grid
 
 **Grid:** CSS Grid is a powerful layout system that allows you to create flexible, two-dimensional grids of elements on a web page. It offers a more intuitive and efficient way to structure complex layouts compared to traditional methods like floats or tables.
@@ -836,25 +835,73 @@ Width and height properties have no effect.
 
 -   **grid-template-columns and grid-template-rows:**
     -   Define the explicit sizing and number of grid tracks (columns and rows). You can specify values in pixels (px), percentages (%), or fractions (fr).
-    -   Example: .grid-container { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 200px auto; } (Creates three equal-width columns and two rows: a fixed-height first row and an auto-height second row)
+    -   Example: 
+```
+    .grid-container { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: 200px auto; 
+    } 
+```
+(Creates three equal-width columns and two rows: a fixed-height first row and an auto-height second row)  
+
 -   **grid-auto-columns and grid-auto-rows:**
     -   Determine the implicit (default) size of grid tracks when explicit values haven't been set for grid-template-columns or grid-template-rows.
-    -   Example: .grid-container { display: grid; grid-auto-columns: minmax(200px, 1fr); } (Sets a minimum width of 200px for columns and switches to a flexible fraction layout if there's enough space)
+    -   Example: 
+```    
+.grid-container { 
+    display: grid; 
+    grid-auto-columns: minmax(200px, 1fr); 
+} 
+```
+(Sets a minimum width of 200px for columns and switches to a flexible fraction layout if there's enough space)
 
 1. **Grid Item Placement:**
     - **grid-column-start, grid-column-end, grid-row-start, and grid-row-end:**
         - Specify the grid lines on which a grid item should start and end, controlling its placement within the grid.
-        - Example: .item1 { grid-column-start: 1; grid-row-start: 1; grid-column-end: span 2; } (Places item1 starting at the first column and first row, spanning two columns)
+        - (Places item1 starting at the first column and first row, spanning two columns)
+        - Example: 
+```    
+    .item1 { 
+        grid-column-start: 1; 
+        grid-row-start: 1; 
+        grid-column-end: span 2; 
+    } 
+```
+
     - **grid-column and grid-row (shorthand):**
         - Combine grid-column-start and grid-row-start into a single property for simpler positioning.
-        - Example: .item2 { grid: 2 / span 2; } (Places item2 starting at the second row and spanning two columns)
-2. **Grid Gaps:**
+        - Example: 
+```
+    .item2 { 
+        grid: 2 / span 2; 
+    } 
+```
+    (Places item2 starting at the second row and spanning two columns)
+1. **Grid Gaps:**
     - **row-gap and column-gap:**
         - Define the spacing between grid rows and columns, respectively.
-        - Example: .grid-container { display: grid; row-gap: 20px; column-gap: 10px; } (Sets 20px spacing between rows and 10px spacing between columns)
+        - (Sets 20px spacing between rows and 10px spacing between columns)
+        - Example: 
+```
+.grid-container { 
+    display: grid;
+    row-gap: 20px;
+    column-gap: 10px;
+} 
+```
     - **gap (shorthand):**
         - Combines row-gap and column-gap into one property for convenience.
-        - Example: .grid-container { display: grid; gap: 15px; } (Sets a 15px gap between both rows and columns).
+        - (Sets a 15px gap between both rows and columns).
+        - Example: 
+```    
+    .grid-container { 
+        display: grid; 
+        gap: 15px; 
+    } 
+```
+
+## Add google font and font-awesome icon
 
 # Pseudo Selector
 In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element) is a keyword added to a selector that specifies a special state of the selected elements. Pseudo-selectors allow you to style elements based on their state or position in the document tree without needing to add additional classes or IDs to the HTML.
@@ -862,10 +909,10 @@ In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element
 **Two main type of Pseudo selector**
 
 **1. pseudo element:** Pseudo-elements are used to style specific parts of an element. 
-    + before: Inserts content before the content of an element.
-    + after: Inserts content after the content of an element.
-    + first-letter: Styles the first letter of a block element.
-    + first-line: Styles the first line of a block element.
+    + before: pseudo-element inserts content before the content of an element. It is often used to add decorative elements or additional information.
+    + after: pseudo-element inserts content after the content of an element. It's useful for adding decorative elements or icons.
+    + first-letter:  pseudo-element targets the first letter of the text content of an element. It's commonly used for drop caps or stylized initial letters.
+    + first-line:pseudo-element styles the first line of text in an element. It's used to apply specific styles to the initial line of a block of text.
 
 **2. pseudo class:** Pseudo-classes are used to define the special states of an element.
       + Hover: Styles an element when the mouse pointer is over it.
@@ -873,6 +920,85 @@ In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element
       + first-child: Styles the first child of a parent element.
       + last-child: Styles the last child of a parent element.
       + nth-child: Styles the nth child of a parent element.
+
+|Pseudo-Class | Description | 
+|-------------|-------------|
+|:hover | Styles an element when the mouse is over it |
+|:focus	|Styles an element when it is focused (clicked, selected)|
+|:first-child	|Styles the first child of a parent|
+|:last-child	|Styles the last child of a parent|
+|:nth-child(n)	|Styles the nth child of a parent|
+
+
+**What is Difference between Pseudo class and pseudo elements?**
+
+|Feature	|Pseudo-Class (:)	|Pseudo-Element (::)|
+|---------|-----------------|-------------------|
+|**Purpose**	|Selects an element based on its state or position	|Styles a part of an element|
+|**Syntax**	|Uses a single colon (:)	|Uses a double colon (::)|
+|**Example**	|:hover, :focus, :nth-child(2)	|::before, ::after, ::first-line|
+|**Affects**	|The entire element	|A specific part of an element|
+|**Modification**	|Cannot add new content	|Can insert new content (::before, ::after)|
+
+
+## Transition in CSS
+**Definition:** Transitions are a powerful CSS feature that allows you to smoothly animate changes between different style values for an element. This creates a more visually appealing and user-friendly experience when elements on your web page change states (e.g., hovering over a button, clicking a link, changing page sections).
+
++ **CSS Transition Properties**
+**1. transition-property:** Specifies the name of the CSS property the transition effect is for.
+**2. transition-duration:** Defines how long the transition takes to complete.
+**3. transition-timing-function:** Specifies the speed curve of the transition effect. This property allows for customization of the acceleration and deceleration of the transition.
+    1. ease (defalut): starts slow, then fast, then ends slow
+    2. linear
+    3. ease-in
+    4. ease-out
+    5. ease-in-out
+    6. cubic-bezier(n,n,n,n)
+**4. transition-delay:** Specifies a delay before the transition starts.
+**You can combine all the transition properties into a single shorthand property called transition**
+`transition : property duration timing-function delay;`
+
+
+## Animation in CSS
+**Definition:** CSS animations allow you to animate the transition of CSS properties over time. They can be used to create smooth transitions, keyframe animations, and more.
+
+**Properties of CSS Animation:**
+1. Keyframe: Defines the animation's intermediate steps.
+```
+@keyframes animationName {
+    0% { 
+        /* Initial state */ 
+    }
+    50% { 
+        /* Intermediate state */ 
+    }
+    100% { 
+        /* Final state */ 
+    }
+}
+```
+
+**2. Animation Name:** Specifies the name of the @keyframes animation to apply to the element.
+
+**3. Animation Duration:** Specifies the duration of the animation.
+
+**4. animation-timing-function:** Specifies the speed curve of the animation.
+   1. linear
+   2. ease
+   3. ease-in
+   4. ease-out
+   5. ease-in-out
+   6. cubic-bezier(n,n,n,n).
+
+**5. Animation-delay:** Specifies a delay before the animation starts.
+**6. animation-iteration-count:** Specifies the number of times the animation should be played.
+- Possible values: infinite, any number.
+**7. animation-direction:** Specifies whether the animation should play in reverse on alternate cycles.
+- Possible Value: normal, reverse, alternate, alternate-reverse
+**8. animation-fill-mode:** Specifies how a CSS animation should apply styles to its target before and after it is executing.
+- Possible values: none, forwards, backwards, both.
+**9. animation-play-state:** Specifies whether the animation is running or paused.
+- Possible values: running, paused.
 
 ---
 
