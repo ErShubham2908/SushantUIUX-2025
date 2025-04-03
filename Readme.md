@@ -903,23 +903,40 @@ Width and height properties have no effect.
 
 ## Add google font and font-awesome icon
 
-# Pseudo Selector
+**Step to add Google Font in HTML / CSS Project**
+
+- **Step 1:** Go to Google Fonts.
+- **Step 2:** Search for the font you want (e.g., Roboto).
+- **Step 3:** Click on the font and select styles (Regular, Bold, Italic, etc.).
+- **Step 4:** Click "Get embed code" and copy the `<link>` tag.
+- **Step 5:** Add the `<link>` Tag to Your HTML.
+- **Step 6:** Now, add the font to your CSS file (styles.css) using `font-family: font-name;`
+
+**Step to add Font Awesome Icon in HTML / CSS Project**
+- **Step 1:** Go to FontAwesome website
+- **Step 1:** Add the Font Awesome CDN Link in Your HTML.
+- **Step2:** `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`
+
+
+
+## CSS Pseudo Selector
 In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element) is a keyword added to a selector that specifies a special state of the selected elements. Pseudo-selectors allow you to style elements based on their state or position in the document tree without needing to add additional classes or IDs to the HTML.
 
 **Two main type of Pseudo selector**
 
 **1. pseudo element:** Pseudo-elements are used to style specific parts of an element. 
-    + before: pseudo-element inserts content before the content of an element. It is often used to add decorative elements or additional information.  
-    + after: pseudo-element inserts content after the content of an element. It's useful for adding decorative elements or icons.  
-    + first-letter:  pseudo-element targets the first letter of the text content of an element. It's commonly used for drop caps or stylized initial letters.   
-    + first-line:pseudo-element styles the first line of text in an element. It's used to apply specific styles to the initial line of a block of text.  
+  + **before:** pseudo-element inserts content before the content of an element. It is often used to add decorative elements or additional information.  
+  + **after:** pseudo-element inserts content after the content of an element. It's useful for adding decorative elements or icons.  
+  + **first-letter:**  pseudo-element targets the first letter of the text content of an element. It's commonly used for drop caps or stylized initial letters.   
+  + **first-line**:pseudo-element styles the first line of text in an element. It's used to apply specific styles to the initial line of a block of text.  
+
 
 **2. pseudo class:** Pseudo-classes are used to define the special states of an element.
-      + Hover: Styles an element when the mouse pointer is over it.  
-      + focus: Styles an element when it has focus (e.g., when an input field is selected).  
-      + first-child: Styles the first child of a parent element.  
-      + last-child: Styles the last child of a parent element.  
-      + nth-child: Styles the nth child of a parent element.  
+  + **Hover:** Styles an element when the mouse pointer is over it.  
+  + **focus:** Styles an element when it has focus (e.g., when an input field is selected).  
+  + **first-child:** Styles the first child of a parent element.  
+  + **last-child:** Styles the last child of a parent element.  
+  + **nth-child:** Styles the nth child of a parent element.  
 
 |Pseudo-Class | Description | 
 |-------------|-------------|
@@ -953,7 +970,8 @@ In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element
     3. ease-in
     4. ease-out
     5. ease-in-out
-    6. cubic-bezier(n,n,n,n)
+    6. cubic-bezier(n,n,n,n)  
+   
 **4. transition-delay:** Specifies a delay before the transition starts.  
 **You can combine all the transition properties into a single shorthand property called transition**
 `transition : property duration timing-function delay;`
