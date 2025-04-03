@@ -909,17 +909,17 @@ In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element
 **Two main type of Pseudo selector**
 
 **1. pseudo element:** Pseudo-elements are used to style specific parts of an element. 
-    + before: pseudo-element inserts content before the content of an element. It is often used to add decorative elements or additional information.
-    + after: pseudo-element inserts content after the content of an element. It's useful for adding decorative elements or icons.
-    + first-letter:  pseudo-element targets the first letter of the text content of an element. It's commonly used for drop caps or stylized initial letters.
-    + first-line:pseudo-element styles the first line of text in an element. It's used to apply specific styles to the initial line of a block of text.
+    + before: pseudo-element inserts content before the content of an element. It is often used to add decorative elements or additional information.  
+    + after: pseudo-element inserts content after the content of an element. It's useful for adding decorative elements or icons.  
+    + first-letter:  pseudo-element targets the first letter of the text content of an element. It's commonly used for drop caps or stylized initial letters.   
+    + first-line:pseudo-element styles the first line of text in an element. It's used to apply specific styles to the initial line of a block of text.  
 
 **2. pseudo class:** Pseudo-classes are used to define the special states of an element.
-      + Hover: Styles an element when the mouse pointer is over it.
-      + focus: Styles an element when it has focus (e.g., when an input field is selected).
-      + first-child: Styles the first child of a parent element.
-      + last-child: Styles the last child of a parent element.
-      + nth-child: Styles the nth child of a parent element.
+      + Hover: Styles an element when the mouse pointer is over it.  
+      + focus: Styles an element when it has focus (e.g., when an input field is selected).  
+      + first-child: Styles the first child of a parent element.  
+      + last-child: Styles the last child of a parent element.  
+      + nth-child: Styles the nth child of a parent element.  
 
 |Pseudo-Class | Description | 
 |-------------|-------------|
@@ -945,16 +945,16 @@ In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element
 **Definition:** Transitions are a powerful CSS feature that allows you to smoothly animate changes between different style values for an element. This creates a more visually appealing and user-friendly experience when elements on your web page change states (e.g., hovering over a button, clicking a link, changing page sections).
 
 + **CSS Transition Properties**
-**1. transition-property:** Specifies the name of the CSS property the transition effect is for.
-**2. transition-duration:** Defines how long the transition takes to complete.
-**3. transition-timing-function:** Specifies the speed curve of the transition effect. This property allows for customization of the acceleration and deceleration of the transition.
+**1. transition-property:** Specifies the name of the CSS property the transition effect is for.  
+**2. transition-duration:** Defines how long the transition takes to complete.  
+**3. transition-timing-function:** Specifies the speed curve of the transition effect. This property allows for customization of the acceleration and deceleration of the transition.  
     1. ease (defalut): starts slow, then fast, then ends slow
     2. linear
     3. ease-in
     4. ease-out
     5. ease-in-out
     6. cubic-bezier(n,n,n,n)
-**4. transition-delay:** Specifies a delay before the transition starts.
+**4. transition-delay:** Specifies a delay before the transition starts.  
 **You can combine all the transition properties into a single shorthand property called transition**
 `transition : property duration timing-function delay;`
 
@@ -990,13 +990,16 @@ In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element
    5. ease-in-out
    6. cubic-bezier(n,n,n,n).
 
-**5. Animation-delay:** Specifies a delay before the animation starts.
+**5. Animation-delay:** Specifies a delay before the animation starts.  
 **6. animation-iteration-count:** Specifies the number of times the animation should be played.
-- Possible values: infinite, any number.
+- Possible values: infinite, any number.  
+
 **7. animation-direction:** Specifies whether the animation should play in reverse on alternate cycles.
-- Possible Value: normal, reverse, alternate, alternate-reverse
+- Possible Value: normal, reverse, alternate, alternate-reverse  
+
 **8. animation-fill-mode:** Specifies how a CSS animation should apply styles to its target before and after it is executing.
 - Possible values: none, forwards, backwards, both.
+
 **9. animation-play-state:** Specifies whether the animation is running or paused.
 - Possible values: running, paused.
 
