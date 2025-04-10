@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Pseudo Elements */
+/* .quote::before {
+    content: "“";
+    color: red;
+    font-size: 24px;
+}
+
+.quote::after{
+    content: " \202";
+    color: green;
+    font-size: 24px;
+}
+
+p::first-letter {
+    font-size: 36px;
+    font-weight: bold;
+    color: blue;
+    margin-right: 5px;
+    line-height: 20px;
+}
+
+p::first-line {
+    font-weight: bold;
+    font-size: 20px;
+    color: purple;
+} */
+
+/* Pseudo Class */
+
+button:hover {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+input:focus {
+    border: 2px solid green;
+    outline: none;
+  }
+
+p:first-child {
+    color: red;
+    font-weight: bold;
+}
+
+p:last-child {
+    color: blue;
+    font-style: italic;
+  }
+
+  li:nth-child(2) {
+    color: green;
+    font-weight: bold;
+  }

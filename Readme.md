@@ -908,7 +908,7 @@ Width and height properties have no effect.
 - **Step 1:** Go to Google Fonts.
 - **Step 2:** Search for the font you want (e.g., Roboto).
 - **Step 3:** Click on the font and select styles (Regular, Bold, Italic, etc.).
-- **Step 4:** Click "Get embed code" and copy the `<link>` tag.
+- **Step 4:** Click "Get embed code" and copy the `<link>` tag or @import .
 - **Step 5:** Add the `<link>` Tag to Your HTML.
 - **Step 6:** Now, add the font to your CSS file (styles.css) using `font-family: font-name;`
 
@@ -917,7 +917,7 @@ Width and height properties have no effect.
 - **Step 1:** Add the Font Awesome CDN Link in Your HTML.
 - **Step2:** `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`
 
-
+## From next lecture
 
 ## CSS Pseudo Selector
 In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element) is a keyword added to a selector that specifies a special state of the selected elements. Pseudo-selectors allow you to style elements based on their state or position in the document tree without needing to add additional classes or IDs to the HTML.
@@ -926,30 +926,89 @@ In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element
 
 **1. pseudo element:** Pseudo-elements are used to style specific parts of an element. 
   + **before:** pseudo-element inserts content before the content of an element. It is often used to add decorative elements or additional information.  
-  + **after:** pseudo-element inserts content after the content of an element. It's useful for adding decorative elements or icons.  
-  + **first-letter:**  pseudo-element targets the first letter of the text content of an element. It's commonly used for drop caps or stylized initial letters.   
-  + **first-line**:pseudo-element styles the first line of text in an element. It's used to apply specific styles to the initial line of a block of text.  
 
+```
+.example::before {
+    content: "Before text ";
+    font-weight: bold;
+}
+```
+
+  + **after:** pseudo-element inserts content after the content of an element. It's useful for adding decorative elements or icons.
+```
+.example::after {
+    content: " After text";
+    font-style: italic;
+}
+```
+
+  + **first-letter:**  pseudo-element targets the first letter of the text content of an element. It's commonly used for drop caps or stylized initial letters.   
+```
+.example:first-letter {
+    font-size: 150%;
+    color: red;
+}
+```
+
+  + **first-line**:pseudo-element styles the first line of text in an element. It's used to apply specific styles to the initial line of a block of text.  
+```
+.example::first-line {
+    font-weight: bold;
+}
+```
 
 **2. pseudo class:** Pseudo-classes are used to define the special states of an element.
   + **Hover:** Styles an element when the mouse pointer is over it.  
+```
+button:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+```
+
   + **focus:** Styles an element when it has focus (e.g., when an input field is selected).  
+```
+input:focus {
+    border: 2px solid green;
+    outline: none;
+}
+```
+
   + **first-child:** Styles the first child of a parent element.  
+```
+ul li:first-child {
+    color: red;
+    font-weight: bold;
+}
+```
+
   + **last-child:** Styles the last child of a parent element.  
+```
+ul li:last-child {
+    color: blue;
+    font-style: italic;
+}
+```
+
   + **nth-child:** Styles the nth child of a parent element.  
+```
+ul li:nth-child(2) {
+    color: orange;
+    text-decoration: underline;
+}
+```
 
-|Pseudo-Class | Description | 
+|**Pseudo-Class** | **Description** | 
 |-------------|-------------|
-|:hover | Styles an element when the mouse is over it |
-|:focus	|Styles an element when it is focused (clicked, selected)|
-|:first-child	|Styles the first child of a parent|
-|:last-child	|Styles the last child of a parent|
-|:nth-child(n)	|Styles the nth child of a parent|
-
+|**:hover** | Styles an element when the mouse is over it |
+|**:focus**	|Styles an element when it is focused (clicked, selected)|
+|**:first-child**	|Styles the first child of a parent|
+|**:last-child**	|Styles the last child of a parent|
+|**:nth-child(n)**	|Styles the nth child of a parent|
 
 **What is Difference between Pseudo class and pseudo elements?**
 
-|Feature	|Pseudo-Class (:)	|Pseudo-Element (::)|
+|**Feature**	|**Pseudo-Class (:)**	|**Pseudo-Element (::)**|
 |---------|-----------------|-------------------|
 |**Purpose**	|Selects an element based on its state or position	|Styles a part of an element|
 |**Syntax**	|Uses a single colon (:)	|Uses a double colon (::)|
@@ -957,6 +1016,7 @@ In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element
 |**Affects**	|The entire element	|A specific part of an element|
 |**Modification**	|Cannot add new content	|Can insert new content (::before, ::after)|
 
+## Friday Lecture
 
 ## Transition in CSS
 **Definition:** Transitions are a powerful CSS feature that allows you to smoothly animate changes between different style values for an element. This creates a more visually appealing and user-friendly experience when elements on your web page change states (e.g., hovering over a button, clicking a link, changing page sections).
