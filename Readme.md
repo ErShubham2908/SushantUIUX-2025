@@ -914,10 +914,21 @@ Width and height properties have no effect.
 
 **Step to add Font Awesome Icon in HTML / CSS Project**
 - **Step 1:** Go to FontAwesome website
-- **Step 1:** Add the Font Awesome CDN Link in Your HTML.
-- **Step2:** `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`
+- **Step 2:** Add the Font Awesome CDN Link in Your HTML.
+- **Step 3:** `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`
 
 ## From next lecture
+
+# Z-index
+In Cascading Style Sheets (CSS), the **z-index** property controls the stacking order of positioned elements that overlap on a web page. It acts like a layer system, where elements with higher z-index values appear in front of elements with lower values.
+
+**Key Points about z-index:**
++ **Affects Positioned Elements Only:** z-index only works on elements with positioning set to absolute, relative, fixed, or sticky. The default static positioning doesn't participate in the z-index stacking order.
++ **Higher Value on Top:** Elements with higher z-index values are displayed on top of elements with lower values. Think of it as a layer cake, with higher layers appearing in front.
++ **Integers or auto:** z-index values can be positive or negative integers. Positive values stack elements on top, while negative values push them behind other elements in the stacking context. The default value is auto, which is determined by the element's position in the HTML code (elements positioned later in the code appear on top).
++ **Stacking Context:** The stacking order applies within a specific stacking context, which is usually the entire document viewport. However, certain elements can create their own stacking contexts (e.g., elements with opacity: less than 1, mix-blend-mode: not normal, or transform: translateZ()).
++ **Specificity and Inheritance:** If multiple elements have the same z-index, the element with higher specificity in the CSS rules will be stacked on top. z-index is not inherited by child elements.
+
 
 ## CSS Pseudo Selector
 In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element) is a keyword added to a selector that specifies a special state of the selected elements. Pseudo-selectors allow you to style elements based on their state or position in the document tree without needing to add additional classes or IDs to the HTML.
@@ -1016,7 +1027,59 @@ ul li:nth-child(2) {
 |**Affects**	|The entire element	|A specific part of an element|
 |**Modification**	|Cannot add new content	|Can insert new content (::before, ::after)|
 
-## Friday Lecture
+# CSS Transform
++ The transform property in CSS allows you to manipulate the positioning and visual appearance of elements by applying 2D or 3D transformations. This offers a powerful way to create dynamic and interactive effects without modifying the element's content or layout in the HTML structure.
++ The transform property in CSS allows you to manipulate the positioning and visual appearance of elements by applying 2D or 3D transformations. This offers a powerful way to create dynamic and interactive effects without modifying the element's content or layout in the HTML structure.
++ **Syntax:** transform: none | < transform-function> [< transform-function>];
+  + none: Resets any applied transformations, returning the element to its default position.
+  + < transform-function>: Individual transform functions like **translate()**, **rotate()**, **skew()**, and **scale()**, which we'll explore in detail below.
++ **Transform Functions:**
+1. **translate(x, y, z):**
+   + Moves an element horizontally (x-axis) and/or vertically (y-axis) relative to its original position.
+   + Positive values move the element to the right (x) and down (y).
+   + Negative values move the element to the left (x) and up (y).
+   + Units can be pixels (px), percentages (%), or viewport units (vh, vw).
+   + **Syntax:** translate(tx, ty), where tx is the horizontal translation and ty is the vertical translation.
+2. **rotate(angle):**
+   + Rotates an element clockwise around its center point.
+   + Angle can be specified in degrees (deg), radians (rad), turns (turn), or gradients (grad). Positive values rotate clockwise, negative values counter-clockwise.
+   + **Syntax:** rotate(angle), where angle is the degree of rotation.
+   + The rotation point is the center of the element by default, but you can change it using the **transform-origin** property.
+3. **skew(x-angle, y-angle):**
+   + Skews an element, tilting it along the specified axes.
+   + Positive x-angle skews to the right, negative to the left.
+   + Positive y-angle skews downwards, negative upwards.
+   + Angles are specified in degrees (deg).
+   + **Syntax:** skew(ax, ay), where ax is the horizontal skew angle and ay is the vertical skew angle.
+4. **scale(x, y):**
+   + Scales (resizes) an element proportionally or non-proportionally.
+   + A single value scales both axes equally (e.g., scale(2) doubles the size).
+   + Two values scale the width (x) and height (y) independently.
+   + Values can be percentages (%) or decimal numbers. Values less than 1 shrink the element, greater than 1 enlarge it.
+   + **Syntax:** scale(sx, sy), where sx is the horizontal scaling factor and sy is the vertical scaling factor.
+
+```
+/* Scale Example */
+.scale-example {
+    transform: scale(1.5);
+}
+
+/* Skew Example */
+.skew-example {
+    transform: skew(20deg, 10deg);
+}
+
+/* Translate Example */
+.translate-example {
+    transform: translate(50px, 20px);
+}
+
+/* Rotate Example */
+.rotate-example {
+    transform: rotate(45deg);
+}
+```
+
 
 ## Transition in CSS
 **Definition:** Transitions are a powerful CSS feature that allows you to smoothly animate changes between different style values for an element. This creates a more visually appealing and user-friendly experience when elements on your web page change states (e.g., hovering over a button, clicking a link, changing page sections).
@@ -1035,6 +1098,20 @@ ul li:nth-child(2) {
 **4. transition-delay:** Specifies a delay before the transition starts.  
 **You can combine all the transition properties into a single shorthand property called transition**
 `transition : property duration timing-function delay;`
+
+```
+.transition-box {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    transition: all 0.3s ease; /* Applies transition to all properties over 0.3 seconds */
+}
+
+.transition-box:hover {
+    background-color: #2ecc71;
+    transform: scale(1.2) rotate(15deg);
+}
+```
 
 
 ## Animation in CSS
@@ -1080,6 +1157,26 @@ ul li:nth-child(2) {
 
 **9. animation-play-state:** Specifies whether the animation is running or paused.
 - Possible values: running, paused.
+
+```
+.animation-box {
+    width: 100px;
+    height: 100px;
+    background-color: #9b59b6;
+    animation: moveAndRotate 2s infinite alternate;
+}
+
+@keyframes moveAndRotate {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        background-color: #9b59b6;
+    }
+    100% {
+        transform: translateX(100px) rotate(360deg);
+        background-color: #f1c40f;
+    }
+}
+```
 
 ---
 
