@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-.parent{
-    /* width: 100%; */
-    /* height: 5vh; */
-    /* border: 1px solid red; */
-}
-
 .parent ul{
     width: 80%;
     height: 5vh;
@@ -42,3 +36,17 @@
     /* color: black; */
     text-decoration-line: underline;
 }
+
+
+button{
+    width: 10vw;
+    height: 5vh;
+    border: 1px solid red;
+    margin-top: 4vh;
+    background-color: #fff;
+    transition: color ease-in-out .2s;
+}
+button:hover{
+    background-color: #000;
+    color: #fff;
+}   

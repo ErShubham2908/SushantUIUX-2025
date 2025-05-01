@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Handjet:wght@100..900&family=Heebo&family=Playwrite+MX+Guides&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    width: 80%;
+    height: 20vh;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 4em;
+    text-shadow: 10px 10px 5px gray;
+    font-family: "Caveat", cursive;
+    color: rgb(0, 72, 87);
+    position: relative;
+}
+
+h1::after{
+    content: "";
+    width: 0%;
+    height: 10px;
+    border: 1px solid black;
+    background: linear-gradient(45deg, red, yellow, green);
+    border-radius: 5px;   
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+}
+
+h1:hover::after{
+    animation: motion 2s;
+}
+
+@keyframes motion{
+    0%{
+        width: 0%;
+        left: 0;
+    }
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}

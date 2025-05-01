@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    width: 99%;
+    height: 70vh;
+    margin: auto;
+    border: 1px solid red;
+    display: inline-block;
+}
+
+.child{
+    width: 45%;
+    height: 8vh;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+@media (max-width: 465px){
+    body{
+        background-color: aqua;
+    }
+    .child{
+        display: block;
+        width: 99%;
+    }
+}
+
+@media (min-width: 466px) and (max-width: 768px){
+    body{
+        background-color: red;
+    }
+}

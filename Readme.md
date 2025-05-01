@@ -1178,6 +1178,60 @@ ul li:nth-child(2) {
 }
 ```
 
+
+# Media Query
+- Media queries in CSS allow you to apply styles to a web page based on the characteristics of the device displaying the content, such as its width, height, resolution, and orientation.
+- Media queries are a CSS3 feature that lets you create responsive designs by applying styles based on the device's attributes.
+- They enable websites to adapt to different screen sizes and resolutions, improving usability and accessibility across devices.
+
+**Basic Syntax**
+```
+@media media-type (media-feature) {
+  /* CSS rules */
+}
+```
+
+1. @media: The at-rule to start a media query.
+2. media-type: Specifies the type of device (e.g., screen, print, all).
+3. media-feature: Specifies the conditions (e.g., screen width) that must be met for the styles to apply.
+
+**Common Media Types:**
+
+- all: Suitable for all devices.
+- screen: For computer screens, tablets, smartphones, etc.
+- print: For printed materials and print previews.
+
+**Media Features:**
+   - **Width and Height**
+      - min-width: Minimum width of the viewport.
+      - max-width: Maximum width of the viewport.
+      - min-height: Minimum height of the viewport.
+      - max-height: Maximum height of the viewport.
+   - **Resolution**
+      - Specifies the resolution of the device (e.g., min-resolution, max-resolution).
+   - **Orientation**
+      - Determines if the device is in landscape or portrait mode.
+   - **Aspect Ratio**
+      - The ratio of width to height of the viewport.
+   - **Breakpoints:**
+      - Predefined screen widths at which the design changes are known as breakpoints.
+      - Common breakpoints for responsive design:
+        - 480px: Mobile devices.
+        - 768px: Tablets.
+        - 1024px: Small desktops.
+        - 1200px: Large desktops.
+   - **Logical Operators:**
+      - **and:** Both features must be true (e.g., (min-width: 768px) and (orientation: portrait))
+      - **or:** Either feature can be true (e.g., (min-width: 768px) or (orientation: portrait))
+      - **not:** Inverts the result of a feature (e.g., not (orientation: portrait))
+  - Ex:
+``` 
+@media screen and (min-width: 768px) and (orientation: portrait) {
+    /* Styles for larger screens in portrait */
+}
+```
+
+
 ---
 
 **Code and Notes Repo -** `https://github.com/ErShubham2908/SushantUIUX-2025`  
